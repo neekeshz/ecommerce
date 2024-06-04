@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgres://neekesh:BnR2dvnmHtkbj4xZUD2TxGDE6CTBk5rH@dpg-cpct4pdds78s738spfo0-a/ecommerce_3oh4')
+        default=os.environ.get('DATABASE_URL', 'postgres://neekesh:1212@localhost:5432/ecommerce')
     )
 }
 
