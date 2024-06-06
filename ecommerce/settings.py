@@ -16,6 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-pmi-c74kt9+^v05ns*4=y-)lstod0sxgc@8qxf=8z_s@+z!gxa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-zp5p.onrender.com']
+ALLOWED_HOSTS = ['ecommerce-zp5p.onrender.com',"127.0.0.1"]
 
 # Application definition
 
@@ -68,7 +69,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,13 +126,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-print("INSTALLED_APPS:", INSTALLED_APPS)
+#print("INSTALLED_APPS:", INSTALLED_APPS)
 #postgres://neekesh:BnR2dvnmHtkbj4xZUD2TxGDE6CTBk5rH@dpg-cpct4pdds78s738spfo0-a/ecommerce_3oh4
 #postgres://neekesh:1212@localhost:5432/ecommerce
