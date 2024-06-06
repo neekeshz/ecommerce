@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Shop{% endblock %}</title>
+    <!-- Add CSS files here -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <a href="{% url 'shop:product_list' %}">Home</a>
+            <!-- Add other navigation links here -->
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Content of the child templates will be rendered here -->
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2024 My Django Shop</p>
+    </footer>
+    <!-- Add JavaScript files here -->
+</body>
+</html>
